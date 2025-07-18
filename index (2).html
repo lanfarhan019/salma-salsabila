@@ -1,0 +1,287 @@
+<html lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Profil Salma Salsabila
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+   :root {
+      --beranda-bg: #2e144e;
+      --tentang-bg: #3a2a5e;
+      --pengalaman-bg: #1b132d;
+      --kontak-bg: #261c3a;
+      --aksen: #f4c430;
+      --teks: #ffffff;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--teks);
+    }
+    .halaman { display: none; }
+    .aktif { display: block; }
+    .aksen-teks { color: var(--aksen); }
+
+    /* Efek Love */
+    .love {
+      position: fixed;
+      font-size: 24px;
+      animation: jatuh 1s linear forwards;
+      pointer-events: none;
+      z-index: 9999;
+    }
+    @keyframes jatuh {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(600px) scale(0.5);
+        opacity: 0;
+      }
+    }
+  </style>
+ </head>
+ <body>
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-md text-white shadow-lg">
+   <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">
+     <span class="aksen-teks">
+      Salma
+     </span>
+     Salsabila
+    </div>
+    <div class="space-x-6 hidden md:flex">
+     <button class="hover:text-yellow-400" onclick="tampilkan('beranda')">
+      Beranda
+     </button>
+     <button class="hover:text-yellow-400" onclick="tampilkan('tentang')">
+      Tentang
+     </button>
+     <button class="hover:text-yellow-400" onclick="tampilkan('pengalaman')">
+      Pendidikan
+     </button>
+     <button class="hover:text-yellow-400" onclick="tampilkan('kontak')">
+      Kontak
+     </button>
+    </div>
+    <div class="md:hidden">
+     <button class="text-xl" id="menu-btn">
+      <i class="fas fa-bars">
+      </i>
+     </button>
+    </div>
+   </div>
+   <div class="hidden px-6 pb-4 md:hidden" id="mobile-menu">
+    <button class="block w-full text-left hover:text-yellow-400" onclick="tampilkan('beranda'); toggleMenu()">
+     Beranda
+    </button>
+    <button class="block w-full text-left hover:text-yellow-400" onclick="tampilkan('tentang'); toggleMenu()">
+     Tentang
+    </button>
+    <button class="block w-full text-left hover:text-yellow-400" onclick="tampilkan('pengalaman'); toggleMenu()">
+     Pendidikan
+    </button>
+    <button class="block w-full text-left hover:text-yellow-400" onclick="tampilkan('kontak'); toggleMenu()">
+     Kontak
+    </button>
+   </div>
+  </nav>
+  <!-- Beranda -->
+  <section class="halaman aktif min-h-screen pt-32 px-6" id="beranda" style="background-color: var(--beranda-bg);">
+   <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+    <div class="md:w-1/2">
+     <h1 class="text-5xl font-bold mb-4">
+      Salma
+      <span class="aksen-teks">
+       Salsabila Az Zahra
+      </span>
+     </h1>
+     <h2 class="text-xl md:text-2xl mb-6">
+      Lulusan Teknik Komputer &amp; Jaringan
+     </h2>
+     <p class="mb-6 max-w-md text-gray-300">
+      Saya adalah lulusan jurusan TKJ yang teliti, jujur, dan bertanggung jawab. Siap berkontribusi positif untuk kemajuan tim maupun perusahaan.
+     </p>
+     <div class="flex space-x-4 flex-wrap">
+      <button class="bg-[var(--aksen)] text-black px-6 py-3 rounded-full font-semibold hover:shadow-xl" onclick="tampilkan('kontak'); cintaMenyebar()">
+       Hubungi Saya
+      </button>
+      <button class="border border-[var(--aksen)] text-[var(--aksen)] px-6 py-3 rounded-full hover:bg-[var(--aksen)] hover:text-black transition" onclick="tampilkan('tentang')">
+       Lihat Profil
+      </button>
+     </div>
+    </div>
+    <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+     <img src="salma.jpg" class="rounded-xl border-4 border-[var(--aksen)] shadow-lg max-w-full h-auto" height="500" src="https://storage.googleapis.com/a1aa/image/3a0c8b3b-f543-4a23-a99c-d433789347a0.jpg" width="400"/>
+    </div>
+   </div>
+  </section>
+  <!-- Tentang -->
+  <section class="halaman min-h-screen pt-32 px-6" id="tentang" style="background-color: var(--tentang-bg);">
+   <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">
+     Tentang
+     <span class="aksen-teks">
+      Salma
+     </span>
+    </h2>
+    <p class="text-gray-300 mb-4">
+     Saya adalah lulusan Teknik Komputer dan Jaringan dari SMKN 1 Kadipaten. Memiliki kemampuan bekerja secara teliti, fokus pada kualitas, dan siap beradaptasi di lingkungan kerja profesional.
+    </p>
+    <p class="text-gray-300">
+     Dengan sifat jujur, disiplin, dan tanggung jawab, saya siap memberikan kontribusi terbaik di bidang yang saya tekuni.
+    </p>
+    <div class="mt-10 flex justify-center">
+     <img src="salma1.png" class="rounded-lg shadow-lg max-w-full h-auto" height="400" src="https://storage.googleapis.com/a1aa/image/cae902e3-9381-4b47-b80f-cc4f0b6d80ac.jpg" width="600"/>
+    </div>
+   </div>
+  </section>
+  <!-- Pendidikan -->
+  <section class="halaman min-h-screen pt-32 px-6" id="pengalaman" style="background-color: var(--pengalaman-bg);">
+   <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-10">
+     Riwayat
+     <span class="aksen-teks">
+      Pendidikan
+     </span>
+    </h2>
+    <ul class="space-y-6 text-left">
+     <li class="bg-[#2e2e45] p-4 rounded-md">
+      <p class="text-yellow-400 font-bold">
+       2022 - 2025
+      </p>
+      <p>
+       SMKN 1 Kadipaten - Teknik Komputer dan Jaringan
+      </p>
+     </li>
+     <li class="bg-[#2e2e45] p-4 rounded-md">
+      <p class="text-yellow-400 font-bold">
+       2019 - 2022
+      </p>
+      <p>
+       MTSN 6 Karangsambung
+      </p>
+     </li>
+     <li class="bg-[#2e2e45] p-4 rounded-md">
+      <p class="text-yellow-400 font-bold">
+       2013 - 2019
+      </p>
+      <p>
+       SDN VIII Kadipaten
+      </p>
+     </li>
+    </ul>
+    <h3 class="text-2xl font-semibold mt-12 mb-4">
+     Keahlian
+    </h3>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+     <div class="bg-[#403a60] py-3 rounded-md">
+      Komputer
+     </div>
+     <div class="bg-[#403a60] py-3 rounded-md">
+      Jaringan
+     </div>
+     <div class="bg-[#403a60] py-3 rounded-md">
+      Teliti
+     </div>
+     <div class="bg-[#403a60] py-3 rounded-md">
+      Jujur
+     </div>
+     <div class="bg-[#403a60] py-3 rounded-md">
+      Disiplin
+     </div>
+     <div class="bg-[#403a60] py-3 rounded-md">
+      Tanggung Jawab
+     </div>
+    </div>
+    <h3 class="text-2xl font-semibold mt-12 mb-4">
+     Hobi
+    </h3>
+    <div class="flex flex-wrap gap-4 justify-center">
+     <div class="bg-[#403a60] py-2 px-4 rounded-md">
+      Olahraga
+     </div>
+     <div class="bg-[#403a60] py-2 px-4 rounded-md">
+      Memasak
+     </div>
+     <div class="bg-[#403a60] py-2 px-4 rounded-md">
+      Membaca
+     </div>
+    </div>
+    <div class="mt-10 flex justify-center">
+     <img src="salma2.jpg" class="rounded-lg shadow-lg max-w-full h-auto" height="300" src="https://storage.googleapis.com/a1aa/image/bbc59a12-adae-4e9b-cf4b-4075626608b9.jpg" width="600"/>
+    </div>
+   </div>
+  </section>
+  <!-- Kontak -->
+  <section class="halaman min-h-screen pt-32 px-6 text-center" id="kontak" style="background-color: var(--kontak-bg);">
+   <div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6">
+     Hubungi
+     <span class="aksen-teks">
+      Salma
+     </span>
+    </h2>
+    <p class="mb-4 text-yellow-400">
+     <i class="fas fa-phone">
+     </i>
+     <span class="text-white">
+      089657606382
+     </span>
+    </p>
+    <p class="mb-4 text-yellow-400">
+     <i class="fas fa-envelope">
+     </i>
+     <span class="text-white">
+      salmaaasalsabila22@gmail.com
+     </span>
+    </p>
+    <p class="text-yellow-400">
+     <i class="fas fa-map-marker-alt">
+     </i>
+     <span class="text-white">
+      Dukuh Bitung RT 02 RW 05, Karangsambung, Kadipaten, Majalengka
+     </span>
+    </p>
+    <div class="mt-10 flex justify-center">
+     <img src="salma3.jpg" class="rounded-lg shadow-lg max-w-full h-auto" height="400" src="https://storage.googleapis.com/a1aa/image/ac4dc498-ee3a-48d9-67eb-e21626ea2866.jpg" width="600"/>
+    </div>
+   </div>
+  </section>
+  <footer class="bg-black/50 text-center text-gray-400 py-6 text-sm">
+   © 2025 Salma Salsabila Az Zahra. All rights reserved.
+  </footer>
+  <script>
+   function tampilkan(id) {
+      document.querySelectorAll('.halaman').forEach(el => el.classList.remove('aktif'));
+      document.getElementById(id).classList.add('aktif');
+      window.scrollTo(0, 0);
+    }
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    function toggleMenu() {
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.querySelector('i').classList.toggle('fa-bars');
+      menuBtn.querySelector('i').classList.toggle('fa-times');
+    }
+    menuBtn.addEventListener('click', toggleMenu);
+
+    function cintaMenyebar() {
+      for (let i = 0; i < 30; i++) {
+        const love = document.createElement('div');
+        love.classList.add('love');
+        love.innerText = '❤️';
+        love.style.left = Math.random() * window.innerWidth + 'px';
+        love.style.top = Math.random() * 100 + 'px';
+        document.body.appendChild(love);
+        setTimeout(() => love.remove(), 1000);
+      }
+    }
+  </script>
+ </body>
+</html>
